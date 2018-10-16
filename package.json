@@ -14,12 +14,13 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.1.5",
     "apollo-server": "^2.1.0",
-    "graphql": "^14.0.2"
+    "graphql": "^14.0.2",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {
     "esm": "^3.0.79"
   },
   "engines": {
-    "node": "10.10.0" 
+    "node": "10.10.0"
   }
 }
