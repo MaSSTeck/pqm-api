@@ -4,7 +4,7 @@
   "description": "manage REST api and GraphQL api for pqm",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r esm index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [
     "pqm"
