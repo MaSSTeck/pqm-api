@@ -14,7 +14,7 @@ const server = new ApolloServer({
         };
     },
 });
-
+console.log("port number:", serverConf.SERVER_PORT);
 server.listen(serverConf.SERVER_PORT).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
