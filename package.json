@@ -4,7 +4,7 @@
   "description": "manage REST api and GraphQL api for pqm",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon -r esm index.js"
   },
   "keywords": [
     "pqm"
@@ -14,8 +14,7 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.1.5",
     "apollo-server": "^2.1.0",
-    "graphql": "^14.0.2",
-    "nodemon": "^1.18.4"
+    "graphql": "^14.0.2"
   },
   "devDependencies": {
     "esm": "^3.0.79"
