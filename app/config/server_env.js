@@ -4,7 +4,7 @@ const SERVER_ENV = {
 
     'production': {
         'BASE_API': PROD_API,
-        'SERVER_PORT': process.env.PORT || 4000
+        'SERVER_PORT': process.env.IWIP_SERVER_PORT|| 4000
     },
     'development': {
         'BASE_API': DEV_API,

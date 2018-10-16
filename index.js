@@ -4,7 +4,7 @@ import { typeDefs } from './app/graph/schema';
 import { resolvers } from './app/graph/resolvers/index';
 import SERVER_ENV from './app/config/server_env';
 
-const serverConf = SERVER_ENV['development'];
+const serverConf = SERVER_ENV['production'];
 const server = new ApolloServer({
     typeDefs,
     resolvers,
