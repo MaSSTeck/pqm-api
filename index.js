@@ -8,6 +8,8 @@ const serverConf = SERVER_ENV['production'];
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    introspection: true,
+    playground: true,
     dataSources: () => {
         return {
             questionAPI: new QuestionAPI(),
