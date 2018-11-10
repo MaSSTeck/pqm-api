@@ -7,6 +7,8 @@ export const resolvers = {
         getQuestion: QuestionResolver.getQuestion,
         getQuestions: QuestionResolver.getQuestions,
         getManyQuestions: QuestionResolver.getManyQuestions,
+        getTopQuestions: QuestionResolver.getTopQuestions,
+
 
     },
 }

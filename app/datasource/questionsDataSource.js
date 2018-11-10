@@ -37,4 +37,9 @@ export class QuestionAPI extends RESTDataSource {
     return result.data;
   }
 
+  async topQuestions() {
+    const result = await this.get('top-q');
+    return result.data;
+  }
+
 };

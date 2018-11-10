@@ -23,6 +23,7 @@ export const typeDefs = gql`
     getQuestion(subject:String!, type:String, year:String): Question
     getQuestions(limit:Int!,subject:String!, type:String, year:String): [Question]
     getManyQuestions(subject:String!, type:String, year:String): [Question]
+    getTopQuestions: [Question]
 
   }
 `;

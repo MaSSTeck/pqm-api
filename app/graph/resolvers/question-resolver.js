@@ -11,5 +11,9 @@ export default {
 
   getManyQuestions: (root, {subject,type,year}, { dataSources }) => {
       return  dataSources.questionAPI.manyQuestions(subject,type,year) 
+  },
+
+  getTopQuestions: (root, args, { dataSources }) => {
+    return  dataSources.questionAPI.topQuestions() 
   }
 } 
