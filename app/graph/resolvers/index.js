@@ -8,6 +8,7 @@ export const resolvers = {
         getQuestions: QuestionResolver.getQuestions,
         getManyQuestions: QuestionResolver.getManyQuestions,
         getTopQuestions: QuestionResolver.getTopQuestions,
+        getQuestionById: QuestionResolver.getQuestionById,
 
 
     },

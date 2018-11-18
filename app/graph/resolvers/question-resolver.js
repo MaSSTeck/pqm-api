@@ -15,5 +15,9 @@ export default {
 
   getTopQuestions: (root, args, { dataSources }) => {
     return  dataSources.questionAPI.topQuestions() 
+  },
+
+  getQuestionById: (root, {id,subject}, { dataSources }) => {
+    return  dataSources.questionAPI.questionById(id,subject) 
   }
 } 

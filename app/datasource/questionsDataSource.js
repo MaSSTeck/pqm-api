@@ -42,4 +42,11 @@ export class QuestionAPI extends RESTDataSource {
     return result.data;
   }
 
+  async questionById(id,subject,) {
+    const result = await this.get(`q-by-id/${id}`, {
+      subject: subject
+  });
+  return result.data;
+}
+
 };
