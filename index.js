@@ -1,4 +1,5 @@
 import { ApolloServer, gql } from 'apollo-server';
+import "./app/config/db";
 import { QuestionAPI } from './app/datasource/questionsDataSource'
 import { typeDefs } from './app/graph/schema';
 import { resolvers } from './app/graph/resolvers/index';

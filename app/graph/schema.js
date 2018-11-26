@@ -18,6 +18,13 @@ export const typeDefs = gql`
     d: String
   }
 
+  type Kitty{
+    id: String
+    name: String
+    created_at: String
+    updated_at: String
+  }
+
   type Query {
 
     getQuestion(subject:String!, type:String, year:String): Question
@@ -25,5 +32,6 @@ export const typeDefs = gql`
     getManyQuestions(subject:String!, type:String, year:String): [Question]
     getTopQuestions: [Question]
     getQuestionById(id:Int!, subject:String!): Question
+    getAllKitty: [Kitty]
   }
 `;

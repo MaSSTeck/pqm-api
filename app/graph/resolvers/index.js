@@ -1,4 +1,5 @@
 import QuestionResolver from '../resolvers/question-resolver'
+import KittyResolver from '../resolvers/kitty-resolver'
 
 export const resolvers = {
 
@@ -9,6 +10,9 @@ export const resolvers = {
         getManyQuestions: QuestionResolver.getManyQuestions,
         getTopQuestions: QuestionResolver.getTopQuestions,
         getQuestionById: QuestionResolver.getQuestionById,
+
+        getAllKitty: KittyResolver.getAllKitty,
+
 
 
     },
