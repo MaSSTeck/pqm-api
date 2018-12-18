@@ -1,13 +1,13 @@
-import {PROD_API, DEV_API} from './constants'
+import constants from './constants'
 
 const SERVER_ENV = {
 
     'production': {
-        'BASE_API': PROD_API,
+        'BASE_API': constants.PROD_API,
         'SERVER_PORT': process.env.PORT|| 4000
     },
     'development': {
-        'BASE_API': DEV_API,
+        'BASE_API': constants.DEV_API,
         'SERVER_PORT': process.env.PORT || 4000
     }
 };

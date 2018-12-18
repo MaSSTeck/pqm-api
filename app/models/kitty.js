@@ -15,4 +15,4 @@ kittySchema.pre('save', function (next) {
 
     next();
 });
-export default mongoose.model('TheKitty', kittySchema);
+export default mongoose.model('Kitten', kittySchema);
