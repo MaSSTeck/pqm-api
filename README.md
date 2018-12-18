@@ -10,16 +10,16 @@ The project serves at port 4000
 
 `{
   getQuestion(subject:"english"){
-    id
-    question
+    id,
+    question,
     option{
       a,
       b,
       c,
       d
     }
-    answer
-    examtype
+    answer,
+    examtype,
     examyear
   }
 }`
