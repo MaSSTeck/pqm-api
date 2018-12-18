@@ -1,5 +1,5 @@
 {
-  "name": "pqm-server",
+  "name": "fastq-server",
   "version": "1.0.0",
   "description": "manage REST api and GraphQL api for pqm",
   "main": "index.js",
@@ -14,8 +14,12 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.1.5",
     "apollo-server": "^2.1.0",
+    "bcrypt-nodejs": "0.0.3",
     "graphql": "^14.0.2",
-    "nodemon": "^1.18.6"
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.13",
+    "nodemon": "^1.18.7"
+
   },
   "devDependencies": {
     "esm": "^3.0.79"

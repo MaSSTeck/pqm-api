@@ -1,10 +1,11 @@
 import { ApolloServer, gql } from 'apollo-server';
+import "./app/config/db";
 import { QuestionAPI } from './app/datasource/questionsDataSource'
 import { typeDefs } from './app/graph/schema';
 import { resolvers } from './app/graph/resolvers/index';
 import SERVER_ENV from './app/config/server_env';
 
-const serverConf = SERVER_ENV['production'];
+const serverConf = SERVER_ENV['development'];
 const server = new ApolloServer({
     typeDefs,
     resolvers,
