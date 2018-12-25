@@ -3,11 +3,11 @@ import constants from '../config/constants';
 import User from '../models/user';
 
 export async function requireAuth(user) {
-    if (!user || !user._id) {
+    if (!user) {
         throw new Error('Unauthorized!');
     }
 
-    const me = await User.findById(user._id);
+    const me = await User.findById(user);
 
     if (!me) {
         throw new Error('Unauthorized!');

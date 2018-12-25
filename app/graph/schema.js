@@ -19,6 +19,23 @@ export const typeDefs = gql`
     d: String
   }
 
+  type User {
+    id: String
+    gender: String
+    password: String
+    email: String
+    username: String
+  }
+
+  type Comment {
+    id: String!,
+    questionId: Int!
+    subject:String!,
+    comment: String!
+    created_at: Date!
+    user: User
+  }
+
   type Kitty{
     id: String!
     name: String!
@@ -27,6 +44,7 @@ export const typeDefs = gql`
   }
   type Auth {
     token: String!
+    user: User
   }
   type Status {
     status:Int!
@@ -47,11 +65,14 @@ export const typeDefs = gql`
     getTopQuestions: [Question]
     getQuestionById(id:Int!, subject:String!): Question
     getAllKitty: [Kitty]
+    getComments(questionId:Int!, subject:String!): [Comment]
   }
 
   type Mutation{
     addKitty(name:String!): Status
     signup(username:String!, email:String!, password:String!, gender:String): Auth
     login(email:String!, password:String!): Auth
+    addComment(questionId:Int!, subject:String!, comment:String!, user:String!): Comment
+
   }
 `;

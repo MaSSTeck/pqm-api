@@ -7,6 +7,7 @@ export default {
         try {
             const user = await User.create(args);
             return {
+                user: user,
                 token: user.createToken(),
             };
         } catch (error) {
@@ -17,7 +18,7 @@ export default {
     login: async (_, {email, password}) => {
         try {
             const user = await User.findOne({email});
-
+            console.log('got here');
             if (!user) {
                 throw new Error('User does not exist!');
             }
@@ -31,6 +32,7 @@ export default {
             // }
 
             return {
+                user: user,
                 token: user.createToken()
             };
         } catch (error) {
