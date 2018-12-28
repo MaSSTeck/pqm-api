@@ -3,7 +3,6 @@ import User from '../../models/user';
 export default {
 
     signup: async (_, args) => {
-        console.log("dsdsdsdsd",args);
         try {
             const user = await User.create(args);
             return {

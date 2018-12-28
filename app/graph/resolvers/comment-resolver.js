@@ -20,7 +20,7 @@ export default {
         } catch (error) {
           throw error;
         }
-      },
+    },
 
     // deleteComment: async (_, { _id }, { user }) => {
     //     try {

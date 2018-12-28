@@ -1,3 +1,6 @@
+import MQuestion from '../../models/m_question';
+import { requireAuth } from '../../services/auth';
+
 export default {
   
   getQuestion: (root, { subject, type, year }, { dataSources }) =>{
@@ -19,5 +22,36 @@ export default {
 
   getQuestionById: (root, {id,subject}, { dataSources }) => {
     return  dataSources.questionAPI.questionById(id,subject) 
-  }
+  },
+
+  askQuestion: async (root, args, {  }) => {
+
+      try {
+          console.log(args.user)
+          await requireAuth(args.user);
+          return MQuestion.create({ ...args });
+      } catch (error) {
+          throw error;
+      }
+  },
+
+  getMQuestionById: async (_, args, { }) => {
+    console.log(args.id)
+        try{
+            return await MQuestion.findById(args.id)
+        } catch (error){
+            throw error;
+        }
+  },
+
+  getFreshMQuestion: async (_, args, { }) => {
+    console.log(args.id)
+        try{
+            return MQuestion.find({}).sort({ created_at: -1 })
+        } catch (error){
+            throw error;
+        }
+  },
+
+
 } 
