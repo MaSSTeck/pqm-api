@@ -10,6 +10,8 @@ export const typeDefs = gql`
     answer: String!
     examtype: String!
     examyear: String!
+    questionVote: QuestionVote
+    comment: [Comment]
   }
 
   type MQuestion {
@@ -21,7 +23,8 @@ export const typeDefs = gql`
     option_c: String
     option_d: String
     answer: String
-    questionVote: [QuestionVote]
+    questionVote: QuestionVote
+    comment: [Comment]
   }
 
   type Option {

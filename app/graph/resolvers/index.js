@@ -17,7 +17,11 @@ export const resolvers = {
         user: ({ user }) => User.findById(user),
     },
     MQuestion: {
-        questionVote: ({ questionId }) => QuestionVote.findOne({questionId:questionId}),
+        questionVote: ({ id }) => QuestionVote.findOne({questionId:id}),
+        comment: ({ id, subject }) => Comment.find({questionId:id, subject:subject}),
+    },
+    Question: {
+        questionVote: ({ id }) => QuestionVote.findOne({questionId:id}),
     },
 
     Query: {
