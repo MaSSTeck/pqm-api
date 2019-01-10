@@ -4,7 +4,8 @@ import SERVER_ENV from '../config/server_env';
 export class QuestionAPI extends RESTDataSource {
   constructor() {
     super();
-    const serverConf = SERVER_ENV['development'];
+    // const serverConf = SERVER_ENV['development'];
+    const serverConf = SERVER_ENV['production'];
     this.baseURL = serverConf.BASE_API
   }
 
