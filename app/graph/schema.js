@@ -25,6 +25,8 @@ export const typeDefs = gql`
     answer: String
     questionVote: QuestionVote
     comment: [Comment]
+    created_at: Date
+    user: User
   }
 
   type Option {
